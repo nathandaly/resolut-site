@@ -10,10 +10,10 @@ class Home extends Component {
         return (<h1>Home</h1>)
     }
 }
+//
+// const mapStateToProps = (state) => ({
+//     loading: state.siteState.loading || false,
+//     baseUrl: state.siteState.baseUrl,
+// });
 
-const mapStateToProps = (state) => ({
-    loading: state.siteState.loading,
-    baseUrl: state.siteState.baseUrl,
-});
-
-export default connect(mapStateToProps)(Home)
+export default Home

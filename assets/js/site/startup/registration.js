@@ -2,7 +2,7 @@ import ReactOnRails from 'react-on-rails'
 import SiteApp from './SiteApp'
 import configureStore from '../store/SiteStore'
 
-const recipesStore = configureStore
+const siteStore = configureStore
 
-ReactOnRails.registerStore({ recipesStore })
+ReactOnRails.registerStore({ siteStore })
 ReactOnRails.register({ SiteApp })

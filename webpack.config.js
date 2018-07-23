@@ -12,7 +12,7 @@ Encore
     .cleanupOutputBeforeBuild()
 
     // will output as web/build/app.js
-    .addEntry('app', ['babel-polyfill', 'axios', './assets/js/entryPoint.js'])
+    .addEntry('js/app', ['babel-polyfill', 'axios', './assets/js/entryPoint.js'])
 
     // will output as web/build/global.css
     .addStyleEntry('css/main', './assets/sass/layout.scss')

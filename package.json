@@ -9,8 +9,10 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack-serverside": "encore dev --config webpack.config.serverside.js --watch",
-    "webpack-dev": "encore dev-server",
+    "dev-clientside": "./node_modules/.bin/encore dev --watch",
+    "dev-serverside": "./node_modules/.bin/encore dev --config webpack.config.serverside.js --watch",
+    "prod-clientside": "./node_modules/.bin/encore production",
+    "prod-serverside": "./node_modules/.bin/encore --config webpack.config.serverside.js production",
     "lint": "eslint client/js"
   },
   "author": {
@@ -23,10 +25,10 @@
     "babel-polyfill": "^6.26.0",
     "bootstrap-sass": "^3.3.7",
     "classnames": "^2.2.6",
+    "history": "^4.7.2",
     "jquery": "^3.3.1",
     "js-yaml": "^3.12.0",
     "jwt-decode": "^2.2.0",
-    "liform-react": "^0.6.9",
     "lodash": "^4.17.10",
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
@@ -36,10 +38,10 @@
     "react-on-rails": "^11.1.0-beta.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
-    "source-map-support": "^0.5.6",
-    "webpack": "^4.16.1"
+    "source-map-support": "^0.5.6"
   },
   "devDependencies": {
     "@symfony/webpack-encore": "^0.20.1",
@@ -48,6 +50,7 @@
     "babel-eslint": "^8.2.6",
     "babel-loader": "^7.1.5",
     "babel-plugin-flow-runtime": "^0.17.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
@@ -71,6 +74,9 @@
     "flow-runtime": "^0.17.0",
     "flow-typed": "^2.5.1",
     "node-sass": "^4.9.2",
-    "sass-loader": "^7.0.3"
+    "redux-logger": "^3.0.6",
+    "sass-loader": "^7.0.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-notifier": "^1.6.0"
   }
 }

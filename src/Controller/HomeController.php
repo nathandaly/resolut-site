@@ -23,8 +23,11 @@ class HomeController extends Controller
     public function homeAction(SerializerInterface $serializer)
     {
         return $this->render('site/home.html.twig', [
-          // Pass an array as props
-          'props' => $serializer->normalize(['someProp' => 1]),
+            // Pass an array as props
+            'props' => $serializer->normalize([]),
+            'initialState' => $serializer->normalize([
+                'loading' => false
+            ]),
         ]);
     }
 }
